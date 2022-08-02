@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rtspproxy
+    restart: always
+    # network_mode: host
+    ports:
+      - "39877:8995"
